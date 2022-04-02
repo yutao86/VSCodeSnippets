@@ -1,0 +1,36 @@
+{
+  "Print to console": {
+    "prefix": "log",
+    "body": [
+      "console.log('$1');",
+      "$2"
+    ],
+    "description": "Log output to console"
+  },
+  "Exmaple Screen": {
+    "prefix": "screen",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "",
+      "class ${1:Name}Screen extends StatefulWidget {",
+      "  const ${1:Name}Screen({Key? key}) : super(key: key);",
+      "",
+      "  @override",
+      "  State<${1:Name}Screen> createState() => _${1:Name}ScreenState();",
+      "}",
+      "",
+      "class _${1:Name}ScreenState extends State<${1:Name}Screen> {",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return Scaffold(",
+      "      appBar: AppBar(title: const Text(\"${2:Title}\")),",
+      "      body: const Center(",
+      "        child: Text(\"I'm a todo example\"),",
+      "      ),",
+      "    );",
+      "  }",
+      "}"
+    ],
+    "description": "Exmaple Screen"
+  }
+}

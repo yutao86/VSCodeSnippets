@@ -10,8 +10,25 @@
 
 ## Quick Installation
 
+macOS
+
 ```sh
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/yutao86/VSCodeSnippets/master/install.sh)"
+```
+
+## Manual Installation
+
+Windows
+
+```powershell
+Remove-Item "$ENV:USERPROFILE\AppData\Roaming\Code\User\snippets" -Recurse
+New-Item -Path "$ENV:USERPROFILE\AppData\Roaming\Code\User\snippets" -ItemType SymbolicLink -Value "$ENV:USERPROFILE\VSCodeSnippets"
+```
+
+macOS
+
+```sh
+# todo
 ```
 
 ## References

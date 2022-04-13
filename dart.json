@@ -1,14 +1,6 @@
 {
-  "Print to console": {
-    "prefix": "log",
-    "body": [
-      "console.log('$1');",
-      "$2"
-    ],
-    "description": "Log output to console"
-  },
-  "Exmaple Screen": {
-    "prefix": "screen",
+  "Screen Stateful Widget": {
+    "prefix": "Screen",
     "body": [
       "import 'package:flutter/material.dart';",
       "",
@@ -25,12 +17,40 @@
       "    return Scaffold(",
       "      appBar: AppBar(title: const Text(\"${2:Title}\")),",
       "      body: const Center(",
-      "        child: Text(\"I'm a todo example\"),",
+      "        child: Text(\"todo\"),",
       "      ),",
       "    );",
       "  }",
       "}"
     ],
-    "description": "Exmaple Screen"
+    "description": "Screen Stateful Widget"
+  },
+  "PopupMenuButton Template": {
+    "prefix": "popupMenuButtonT",
+    "body": [
+      "PopupMenuButton(",
+      "  itemBuilder: (BuildContext context) {",
+      "    return const [",
+      "      PopupMenuItem(child: Text(\"${1:Item1}\"), value: \"${1:Item1}\"),",
+      "      PopupMenuItem(child: Text(\"${2:Item2}\"), value: \"${2:Item2}\"),",
+      "    ];",
+      "  },",
+      "  onSelected: (dynamic object) {",
+      "    switch (object) {",
+      "      case \"${1:Item1}\":",
+      "        debugPrint(\"${1:Item1} selected\");",
+      "        break;",
+      "      case \"${2:Item2}\":",
+      "        debugPrint(\"${2:Item2} selected\");",
+      "        break;",
+      "      default:",
+      "    }",
+      "  },",
+      "  onCanceled: () {",
+      "    debugPrint(\"canceled\");",
+      "  },",
+      ");"
+    ],
+    "description": "PopupMenuButton Template"
   }
 }

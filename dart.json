@@ -52,5 +52,21 @@
       ");"
     ],
     "description": "PopupMenuButton Template"
+  },
+  "Stream Controller Template": {
+    "prefix": "streamController",
+    "body": [
+      "late StreamController<${1:EventType}> _streamController;",
+      "",
+      "late Stream<${1:EventType}> _stream;",
+      "",
+      "Stream<${1:EventType}> get stream => _stream;",
+      "",
+      "initStream() {",
+      "  _streamController = StreamController<${1:EventType}>();",
+      "  _stream = _streamController.stream.asBroadcastStream();",
+      "}"
+    ],
+    "description": "Stream Controller Template"
   }
 }

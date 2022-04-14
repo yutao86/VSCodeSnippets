@@ -1,4 +1,19 @@
 {
+  "Get render box size": {
+    "prefix": "stateGetSize",
+    "body": [
+      "var size = Size.zero;",
+      "",
+      "@override",
+      "void initState() {",
+      "  super.initState();",
+      "  WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {",
+      "    size = context.size!;",
+      "  });",
+      "}"
+    ],
+    "description": "Get render box size"
+  },
   "Screen Stateful Widget": {
     "prefix": "Screen",
     "body": [

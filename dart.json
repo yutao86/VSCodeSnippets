@@ -83,5 +83,18 @@
       "}"
     ],
     "description": "Stream Controller Template"
+  },
+  "Container Border Decoration": {
+    "prefix": "borderDecoration",
+    "body": [
+      "decoration: BoxDecoration(",
+      "  color: Colors.blue,",
+      "  border: Border.all(",
+      "    color: Colors.red,",
+      "    width: 4,",
+      "  ),",
+      "),"
+    ],
+    "description": "Container Border Decoration"
   }
 }

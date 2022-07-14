@@ -96,5 +96,19 @@
       "),"
     ],
     "description": "Container Border Decoration"
+  },
+  "Launch URL": {
+    "prefix": "launchUrl",
+    "body": [
+      "try {",
+      "  final launched = await launchUrl(Uri.parse(${1:Url}));",
+      "  if (!launched) {",
+      "    logger.d('$$runtimeType: failed to launch url $${1:Url}');",
+      "  }",
+      "} catch (e) {",
+      "  logger.e('$$runtimeType: failed to launch url $${1:Url}. $$e');",
+      "}"
+    ],
+    "description": "Launch URL"
   }
 }
